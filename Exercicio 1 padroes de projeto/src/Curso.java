@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Curso extends Produto{
+//Prototipo concreto / Concrate Prototype
+// objeto do contruido pelo builder
+public class Curso extends Produto implements Prototipo{
 	
 	
 	private List<Disciplina> disciplinas;
@@ -20,6 +22,20 @@ public class Curso extends Produto{
 	Curso (){
 		this.disciplinas = new ArrayList<>();
 		this.livros = new ArrayList<>();
+		
+		
+	}
+	
+	
+	Curso (Curso prototipo){
+		this.disciplinas = new ArrayList<>();
+		this.livros = new ArrayList<>();
+		
+		
+		this.setNome( prototipo.getNome());
+		this.setCodigo( prototipo.getCodigo());
+		this.disciplinas =  prototipo.disciplinas;
+		this.livros =  prototipo.livros;
 		
 		
 	}
@@ -48,6 +64,13 @@ public class Curso extends Produto{
 				+ "]";
 	}
 	
+	@Override
+	public Curso clone () {
+		
+		
+		return new Curso(this);
+		
+	};
 	
 
 }

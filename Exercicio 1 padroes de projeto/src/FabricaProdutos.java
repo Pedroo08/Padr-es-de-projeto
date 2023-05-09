@@ -1,3 +1,4 @@
+//Classe abstrata das Fabricas
 public abstract class FabricaProdutos {
 	
 	public Produto getProduto (Tipo tipo,String nome,String codigo) {

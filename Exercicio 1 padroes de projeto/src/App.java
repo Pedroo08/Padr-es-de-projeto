@@ -14,6 +14,7 @@ public class App {
 		
 		produto.fale();
 		produto2.fale();
+		
 	//Builder
 		PedreiroCurso BCurso = new PedreiroCurso();
 		PedreiroEmenta BEmenta = new PedreiroEmenta();
@@ -29,15 +30,31 @@ public class App {
 		
 		
 		BEmenta.resetar();
-		BEmenta.setNome("Redesign Partterns ");
+		BEmenta.setNome("Redesign Parttern");
 		BEmenta.setCodigo("78456");
 		BEmenta.addDisciplina(comportamentais);
 		BEmenta.addLivro(Dp2);
 		BEmenta.addDisciplina((Disciplina) produto);
 		Ementa ementa1 = BEmenta.getResultado();
 		ementa1.mostrarEmenta();
-	
 		
+		//Prototipy e singleton
+		
+		
+		Curso clone  = curso1.clone();
+		clone.fale();
+		
+		
+		Registro registro = Registro.getRegistro();
+		registro.indeficarSe();
+		
+		registro.getRegistro();
+		registro.indeficarSe();
+		
+		Curso prototipo = curso1.clone();
+		registro.Registrar(prototipo);
+		Curso clone2 = (Curso) registro.getPrototipo("Redesign Parttern");
+		clone2.fale();
 		
 	}
 

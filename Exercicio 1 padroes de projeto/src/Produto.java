@@ -1,4 +1,5 @@
 
+//Classe abstrata dos produtos instaciados pelas fabricas
 public abstract class Produto {
 	
 	public String codigo;
