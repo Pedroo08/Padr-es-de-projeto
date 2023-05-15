@@ -9,7 +9,7 @@ public class Registro {
 	static Registro registro;
 	int id;
 	
-	private List<Prototipo> prototipos = new ArrayList<>();;
+	private List<Prototipo> prototipos = new ArrayList<>();
 	
 	private Registro() {}
 	
@@ -30,11 +30,13 @@ public class Registro {
 	public void Registrar(Prototipo prototipo) {
 		this.prototipos.add(prototipo);
 	}
+	
 	public Prototipo getPrototipo(String nome) {
 		for(Prototipo p:prototipos) {
 		
 			if(p.getNome().equals(nome)) {
-				return p;}
+				return p;
+				}
 		}
 		return null;
 		

@@ -70,7 +70,10 @@ public class Curso extends Produto implements Prototipo{
 		
 		return new Curso(this);
 		
-	};
+	}
+
+
+
 	
 
 }

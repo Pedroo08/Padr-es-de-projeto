@@ -16,8 +16,8 @@ public class App {
 		produto2.fale();
 		
 	//Builder
-		PedreiroCurso BCurso = new PedreiroCurso();
-		PedreiroEmenta BEmenta = new PedreiroEmenta();
+		BuilderCurso BCurso = new BuilderCurso();
+		BuilderEmenta BEmenta = new BuilderEmenta();
 		
 		BCurso.resetar();
 		BCurso.setNome("Redesign Partterns ");
